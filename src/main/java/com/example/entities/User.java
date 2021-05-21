@@ -17,15 +17,42 @@ public class User implements UserDetails {
 
     private String username;
 
+    private String firstname;
+    private String secondname;
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getSecondname() {
+        return secondname;
+    }
+
+    public void setSecondname(String secondname) {
+        this.secondname = secondname;
+    }
+
+    public Set<Register> getRegisters() {
+        return registers;
+    }
+
+    public void setRegisters(Set<Register> registers) {
+        this.registers = registers;
+    }
+
+    @ManyToMany
+    private Set<Register> registers;
+
     private boolean isAdmin;
 
     public boolean isAdmin() {
         return isAdmin;
     }
 
-    public void setAdmin(boolean admin) {
-        isAdmin = admin;
-    }
 
     private String password;
     @Transient
@@ -36,8 +63,12 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public User(String username, String password, String passwordConfirm, Set<Role> roles) {
+    public User(String username, String firstname, String secondname, Set<Register> registers, boolean isAdmin, String password, String passwordConfirm, Set<Role> roles) {
         this.username = username;
+        this.firstname = firstname;
+        this.secondname = secondname;
+        this.registers = registers;
+        this.isAdmin = isAdmin;
         this.password = password;
         this.passwordConfirm = passwordConfirm;
         this.roles = roles;

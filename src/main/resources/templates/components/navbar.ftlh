@@ -10,7 +10,6 @@
                     <a class="nav_link" href="../works">Работы</a>
                     <a class="nav_link" href="../reviews">Отзывы</a>
                     <a class="nav_link" href="../doctors">Наши врачи</a>
-                    <a class="nav_link" href="../zapis">Записаться</a>
                     <a class="nav_link" href="../cabinet">${name}</a>
                     <#if isAdmin>
                         <li class="nav-item">

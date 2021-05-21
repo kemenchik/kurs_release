@@ -1,9 +1,6 @@
 package com.example.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -12,6 +9,21 @@ public class Register {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer Id;
+
+    private Date date;
+
+    @OneToOne
+    private Employee doctor;
+
+    public Register(Integer id, Date date, Employee doctor, User client) {
+        Id = id;
+        this.date = date;
+        this.doctor = doctor;
+        this.client = client;
+    }
+
+    @OneToOne
+    private User client;
 
     public Register() {
     }
@@ -27,7 +39,5 @@ public class Register {
     public void setDate(Date date) {
         this.date = date;
     }
-
-    private Date date;
 
 }

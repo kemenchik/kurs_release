@@ -23,9 +23,7 @@ public class RegistrationController {
 
     @PostMapping("/registration")
     public String addUser(com.example.entities.User user, Model model) {
-
         userService.saveUser(user);
-
 
         return "redirect:/login";
     }

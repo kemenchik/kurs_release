@@ -16,9 +16,10 @@ public class Employee {
     private String secondName;
     private Date dates;
     private String cabinet;
+    private String details;
 
-    @ElementCollection
-    private Set<String> comments;
+    @OneToMany
+    private Set<Review> comments;
 
 
     public Integer getId() {
@@ -52,11 +53,19 @@ public class Employee {
     public Employee() {
     }
 
-    public Set<String> getComments() {
+    public Set<Review> getComments() {
         return comments;
     }
 
-    public void setComments(Set<String> comments) {
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
+    }
+
+    public void setComments(Set<Review> comments) {
         this.comments = comments;
     }
 
@@ -68,10 +77,13 @@ public class Employee {
         this.cabinet = cabinet;
     }
 
-    public Employee(String firstName, String secondName, Date dates, String cabinet) {
+    public Employee(Integer id, String firstName, String secondName, Date dates, String cabinet, String details, Set<Review> comments) {
+        Id = id;
         this.firstName = firstName;
         this.secondName = secondName;
         this.dates = dates;
         this.cabinet = cabinet;
+        this.details = details;
+        this.comments = comments;
     }
 }
