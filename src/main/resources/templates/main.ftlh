@@ -26,7 +26,7 @@
                     <img class="features_icon" src="images/img1.png" alt="">
                     <h3 class="feature_title">Индивидуальный рассчет</h3>
                     <h4 class="feature_text">Наши специалисты рассчитают стоимость и
-                        сложность процедур лично для вас!
+                        сложность процедур лично для вас.
                     </h4>
                 </div>
                 <div class="feature_item">
@@ -40,14 +40,15 @@
                     <img class="features_icon" src="images/img3.png" alt="">
                     <h3 class="feature_title">Новые идеи</h3>
                     <h4 class="feature_text">
-                        Техники и идеи, которые применяют в лучших стоматологиях мира
+                        Техники и идеи, которые применяют в лучших стоматологиях мира.
                     </h4>
                 </div>
                 <div class="feature_item">
                     <img class="features_icon" src="images/img4.png" alt="">
-                    <h3 class="feature_title">Easily Customised</h3>
+                    <h3 class="feature_title">Лучшее оборудование</h3>
                     <h4 class="feature_text">
-                        ыыы
+                        В нашей стоматологии врачи используют
+                        новейшее оборудование, привезенное из Швейцарии, Германии и Америки.
                     </h4>
                 </div>
                 <div class="feature_item">
@@ -59,8 +60,7 @@
                 <div class="feature_item">
                     <img class="features_icon" src="images/img6.png" alt="">
                     <h3 class="feature_title">Современные технологии</h3>
-                    <h4 class="feature_text">Все ваши данные хранятся в облаке, а врачи используют
-                        новейшее оборудование, привезенное из Швейцарии, Германии и Америки
+                    <h4 class="feature_text">Все ваши данные хранятся в облаке, а запись происходит через интернет.
                     </h4>
                 </div>
             </div>
