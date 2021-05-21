@@ -1,13 +1,14 @@
 <#import "components/page.ftlh" as p>
 
 <@p.page>
+    <#list employee as el>
     <div class="container">
 
         <h1 style="margin: 0.25rem 0;">
 
         </h1>
         <h2 style="margin: 0.25rem 0;">
-            cabinet 45
+
         </h2>
         <div style="width: 100%; height: 300px; border: 2px solid black; border-radius: 30px; padding: 30px; margin-bottom: 0.125rem; ">
             otzyv
@@ -27,5 +28,5 @@
             </form>
         </#if>
     </div>
-
+    </#list>
 </@p.page>
