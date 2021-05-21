@@ -28,7 +28,7 @@ public class EmployeeController {
     @GetMapping
     @RequestMapping("/{id}")
     public String getDoctor(@PathVariable Integer id, Model model){
-        model.addAttribute("employee", employeeRepo.findFirstById(id));
+        model.addAttribute("employee", employeeRepo.findById(id));
         return "doctorInfo";
     }
 }
