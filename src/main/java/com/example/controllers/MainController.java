@@ -27,4 +27,9 @@ public class MainController {
         return "works";
     }
 
+    @GetMapping
+    @RequestMapping("/main")
+    public String main(){
+        return "main";
+    }
 }
