@@ -19,7 +19,7 @@
 
             <div class="container" style="background-color:#f1f1f1">
                 <a href="/main"><button type="button" class="cancelbtn">Cancel</button></a>
-                <span class="psw"><a href="/register">Зарегистрироваться</a></span>
+                <span class="psw"><a href="/registration">Зарегистрироваться</a></span>
             </div>
         </form>
     </div>
