@@ -10,8 +10,9 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer Id;
+    private Integer id;
 
+    private Integer count = id;
     private String firstName;
     private String secondName;
     private Date dates;
@@ -23,7 +24,7 @@ public class Employee {
 
 
     public Integer getId() {
-        return Id;
+        return this.id;
     }
 
     public String getFirstName() {
@@ -78,12 +79,13 @@ public class Employee {
     }
 
     public Employee(Integer id, String firstName, String secondName, Date dates, String cabinet, String details, Set<Review> comments) {
-        Id = id;
+        this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
         this.dates = dates;
         this.cabinet = cabinet;
         this.details = details;
         this.comments = comments;
+        this.count = id;
     }
 }

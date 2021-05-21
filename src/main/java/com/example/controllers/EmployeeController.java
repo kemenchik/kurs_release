@@ -1,5 +1,6 @@
 package com.example.controllers;
 
+import com.example.entities.Employee;
 import com.example.repos.EmployeeRepo;
 import com.example.repos.ReviewRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class EmployeeController {
     @GetMapping
     @RequestMapping("/{id}")
     public String getDoctor(@PathVariable Integer id, Model model){
-        model.addAttribute("employee", employeeRepo.findById(id));
+        model.addAttribute("employee", employeeRepo.findByCount(id));
         return "doctorInfo";
     }
 }

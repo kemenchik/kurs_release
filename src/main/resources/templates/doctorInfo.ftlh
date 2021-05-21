@@ -1,17 +1,17 @@
 <#import "components/page.ftlh" as p>
 
 <@p.page>
-    <#list employee as el>
     <div class="container">
 
         <h1 style="margin: 0.25rem 0;">
-
+            ${employee.firstName}
+            ${employee.secondName}
         </h1>
         <h2 style="margin: 0.25rem 0;">
-
+            ${employee.cabinet} кабинет
         </h2>
         <div style="width: 100%; height: 300px; border: 2px solid black; border-radius: 30px; padding: 30px; margin-bottom: 0.125rem; ">
-            otzyv
+            ${employee.details}
         </div>
         <div style="width: 100%; height: 300px; border: 2px solid black; border-radius: 30px; padding: 30px; margin-bottom: 0.5rem;">
             works
@@ -28,5 +28,4 @@
             </form>
         </#if>
     </div>
-    </#list>
 </@p.page>
