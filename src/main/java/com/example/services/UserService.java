@@ -39,11 +39,6 @@ public class UserService implements UserDetailsService {
         return user;
     }
 
-    public User findUserById(Integer     userId) {
-        var userFromDb = userRepository.findById(userId);
-        return userFromDb.orElse(new User());
-    }
-
     public List<User> allUsers() {
         return userRepository.findAll();
     }
