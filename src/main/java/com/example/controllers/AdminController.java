@@ -1,8 +1,8 @@
 package com.example.controllers;
 
 
-//import kurs.demo.repos.EmployeeRepo;
-//import kurs.demo.repos.UserRepo;
+import com.example.repos.EmployeeRepo;
+import com.example.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,23 +13,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/admin")
 public class AdminController {
 
-//    @Autowired
-//    private UserRepo userRepo;
-//
-//    @Autowired
-//    private EmployeeRepo employeeRepo;
+    @Autowired
+    private UserRepo userRepo;
+
+    @Autowired
+    private EmployeeRepo employeeRepo;
 
     @GetMapping
     @RequestMapping("/users")
     public String getAllusers(Model model){
-        model.addAttribute("userRepo.findAll()");
+        model.addAttribute(userRepo.findAll());
         return "userList";
     }
 
     @GetMapping
     @RequestMapping("/doctors")
     public String getAllDoctors(Model model){
-        model.addAttribute("employeeRepo.findAll()");
+        model.addAttribute(employeeRepo.findAll());
         return "employeList";
     }
 }

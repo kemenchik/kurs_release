@@ -1,30 +1,32 @@
 package com.example.controllers;
 
-//import kurs.demo.entities.User;
-//import kurs.demo.services.UserService;
+import com.example.entities.User;
+import com.example.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import static org.graalvm.compiler.options.OptionType.User;
+
 @Controller
 public class RegistrationController {
 
-//    @Autowired
-//    private UserService userService;
+    @Autowired
+    private UserService userService;
 
     @GetMapping("/registration")
     public String registration(Model model) {
-        model.addAttribute("userForm", "new User()");
+        model.addAttribute("userForm", new User());
 
         return "registration";
     }
 
     @PostMapping("/registration")
-    public String addUser(Model model) {
+    public String addUser(com.example.entities.User user, Model model) {
 
-//        userService.saveUser(user);
+        userService.saveUser(user);
 
 
         return "redirect:/login";
