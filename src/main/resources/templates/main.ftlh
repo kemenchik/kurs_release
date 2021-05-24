@@ -45,7 +45,7 @@
                 </div>
                 <div class="feature_item">
                     <img class="features_icon" src="images/img4.png" alt="">
-                    <h3 class="feature_title">Лучшее оборудование</h3>
+                    <h3 class="feature_title">Оборудование</h3>
                     <h4 class="feature_text">
                         В нашей стоматологии врачи используют
                         новейшее оборудование, привезенное из Швейцарии, Германии и Америки.

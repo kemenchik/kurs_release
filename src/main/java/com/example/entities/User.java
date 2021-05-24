@@ -20,6 +20,9 @@ public class User implements UserDetails {
     private String firstname;
     private String secondname;
 
+    @OneToMany(fetch = FetchType.EAGER)
+    public Set<Register> registers;
+
     public String getFirstname() {
         return firstname;
     }
@@ -48,8 +51,6 @@ public class User implements UserDetails {
         this.registers = registers;
     }
 
-    @OneToMany
-    private Set<Register> registers;
 
     private boolean isAdmin;
 

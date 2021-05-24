@@ -1,7 +1,6 @@
 package com.example.entities;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -12,17 +11,38 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+
     private Integer count = id;
     private String firstName;
     private String secondName;
-    private Date dates;
     private String cabinet;
     private String details;
+    private String profession;
 
-    @OneToMany
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+    @OneToMany(fetch = FetchType.EAGER)
     private Set<Register> registers;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private Set<Review> comments;
 
     public Set<Register> getRegisters() {
@@ -53,14 +73,6 @@ public class Employee {
         this.secondName = secondName;
     }
 
-    public Date getDates() {
-        return dates;
-    }
-
-    public void setDates(Date dates) {
-        this.dates = dates;
-    }
-
     public Employee() {
     }
 
@@ -88,12 +100,11 @@ public class Employee {
         this.cabinet = cabinet;
     }
 
-    public Employee(Integer id, Integer count, String firstName, String secondName, Date dates, String cabinet, String details, Set<Register> registers, Set<Review> comments) {
+    public Employee(Integer id, Integer count, String firstName, String secondName, String cabinet, String details, Set<Register> registers, Set<Review> comments) {
         this.id = id;
         this.count = count;
         this.firstName = firstName;
         this.secondName = secondName;
-        this.dates = dates;
         this.cabinet = cabinet;
         this.details = details;
         this.registers = registers;
