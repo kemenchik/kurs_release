@@ -20,8 +20,18 @@ public class Employee {
     private String details;
 
     @OneToMany
+    private Set<Register> registers;
+
+    @OneToMany
     private Set<Review> comments;
 
+    public Set<Register> getRegisters() {
+        return registers;
+    }
+
+    public void setRegisters(Set<Register> registers) {
+        this.registers = registers;
+    }
 
     public Integer getId() {
         return this.id;
@@ -78,14 +88,15 @@ public class Employee {
         this.cabinet = cabinet;
     }
 
-    public Employee(Integer id, String firstName, String secondName, Date dates, String cabinet, String details, Set<Review> comments) {
+    public Employee(Integer id, Integer count, String firstName, String secondName, Date dates, String cabinet, String details, Set<Register> registers, Set<Review> comments) {
         this.id = id;
+        this.count = count;
         this.firstName = firstName;
         this.secondName = secondName;
         this.dates = dates;
         this.cabinet = cabinet;
         this.details = details;
+        this.registers = registers;
         this.comments = comments;
-        this.count = id;
     }
 }

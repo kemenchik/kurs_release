@@ -15,10 +15,13 @@ public class Register {
     @OneToOne
     private Employee doctor;
 
-    public Register(Integer id, Date date, Employee doctor, User client) {
-        Id = id;
+    @OneToOne
+    private User user;
+
+    public Register(Date date, Employee doctor, User user, User client) {
         this.date = date;
         this.doctor = doctor;
+        this.user = user;
         this.client = client;
     }
 

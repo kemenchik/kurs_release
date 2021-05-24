@@ -47,8 +47,10 @@ public class Review {
         this.addressee = addressee;
     }
 
-    public Review(String text, boolean isActive) {
-        this.text = text; this.enabled = isActive;
+    public Review(User author, Employee addressee, String text) {
+        this.author = author;
+        this.addressee = addressee;
+        this.text = text;
     }
 
     public Review() {

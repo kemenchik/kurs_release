@@ -1,14 +1,19 @@
 <#import "components/page.ftlh" as p>
 
 <@p.page>
-    <div class="container" style="display: flex; flex-wrap: wrap">
-        <#list reviews as review>
-            <div style="width: 25%; height: 200px; border: #6c7279 2px solid; border-radius: 30px; padding: 20px; margin: 30px">
-                <div>Текст: ${review.text}</div>
-                <div>Фамилия и имя кому: ${review.addressee.firstName}</div>
-                <div>${review.addressee.secondName}</div>
-                <div>Логин от кого: ${review.author.username}</div>
+    <div class="container">
+        <div class="deck-wrap">
+            <div class="deck">
+                <#list reviews as review>
+                    <div class="card">
+                        <div class="cardHeader">${review.addressee.firstName} ${review.addressee.secondName}</div>
+                        <div class="cardBody">
+                            <p>${review.text}</p>
+                        </div>
+                        <div class="cardFooter">${review.author.username}</div>
+                    </div>
+                </#list>
             </div>
-        </#list>
+        </div>
     </div>
 </@p.page>

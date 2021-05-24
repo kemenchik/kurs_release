@@ -20,7 +20,7 @@
             Записаться
         </button>
         <#if Session.SPRING_SECURITY_CONTEXT??>
-            <form method='post' action='' style="margin-top: 75px;">
+            <form method='post' action="/doctors/${employee.id}" style="margin-top: 75px;">
                 <textarea name='text' style="width: 100%" rows='10' placeholder="Оставьте свой отзыв"></textarea>
                 <p><button class="btn btn--red">
                         Отправить

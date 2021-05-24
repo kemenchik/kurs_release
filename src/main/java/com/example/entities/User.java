@@ -32,6 +32,10 @@ public class User implements UserDetails {
         return secondname;
     }
 
+    public User getUser(){
+      return this;
+    };
+
     public void setSecondname(String secondname) {
         this.secondname = secondname;
     }
@@ -44,7 +48,7 @@ public class User implements UserDetails {
         this.registers = registers;
     }
 
-    @ManyToMany
+    @OneToMany
     private Set<Register> registers;
 
     private boolean isAdmin;
@@ -60,10 +64,14 @@ public class User implements UserDetails {
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles;
 
+
     public User() {
     }
 
-    public User(String username, String firstname, String secondname, Set<Register> registers, boolean isAdmin, String password, String passwordConfirm, Set<Role> roles) {
+    public User(Long id, String username, String firstname, String secondname,
+                Set<Register> registers, boolean isAdmin, String password,
+                String passwordConfirm, Set<Role> roles) {
+        this.id = id;
         this.username = username;
         this.firstname = firstname;
         this.secondname = secondname;
