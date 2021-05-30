@@ -12,5 +12,13 @@
         <#else>
             <h3>Записей нет!</h3>
         </#list>
+        <div>
+            <form action="/logout" method="post" style="border: none; background-color: #de9f11;">
+                <button style="background-color:transparent;">
+                    <input type="submit" value="Выйти" style="background-color:transparent; border: none">
+                </button>
+            </form>
+        </div>
+
     </div>
 </@p.page>
