@@ -10,7 +10,7 @@
                 <h2 class="intro_subtitle">Если вы хотите улучшить или защитить свою улыбку, смело обращайтесь к нашим специалистам.</h2>
                 <h3 style="margin: 50px 0;">1-800-1234-567</h3>
 
-                <button href="/doctors" class="btn btn--red">Записаться на прием</button>
+                <a href="/doctors"><button class="btn btn--red">Записаться на прием</button></a>
 
             </div>
         </div>
