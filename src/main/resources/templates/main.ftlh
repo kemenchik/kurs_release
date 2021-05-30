@@ -10,7 +10,7 @@
                 <h2 class="intro_subtitle">Если вы хотите улучшить или защитить свою улыбку, смело обращайтесь к нашим специалистам.</h2>
                 <h3 style="margin: 50px 0;">1-800-1234-567</h3>
 
-                <button href="#" class="btn btn--red">Записаться на прием</button>
+                <button href="/doctors" class="btn btn--red">Записаться на прием</button>
 
             </div>
         </div>
@@ -272,7 +272,7 @@
             <div class="download_text">
                 <p></p>Подберите удобную для вас дату
             </div>
-            <a href="#" class="btn btn--red" style="width: 280px; margin-bottom: 100px; text-align: center" >Записаться</a>
+            <a href="/doctors" class="btn btn--red" style="width: 280px; margin-bottom: 100px; text-align: center" >Записаться</a>
         </div>
     </div>
 </@page.page>

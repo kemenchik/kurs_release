@@ -10,7 +10,7 @@
                 <div>
                     Включен :<input type="hidden" value="${comm.getId()}" name="reviewId">
                     <input type="checkbox" ${comm.enabled?string("checked", "")} name="enabled">
-                    
+
                 </div>
                 <button type="submit"> Сохранить </button>
             </form>
