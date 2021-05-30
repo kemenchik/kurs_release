@@ -6,9 +6,11 @@
             <form action="/admin/comments" method="post">
                 <div>
                     ${comm.text}
+                </div>
+                <div>
+                    Включен :<input type="hidden" value="${comm.getId()}" name="reviewId">
                     <input type="checkbox" ${comm.enabled?string("checked", "")} name="enabled">
                 </div>
-                Включен :<input type="hidden" value="${comm.getId()}" name="reviewId">
                 <button type="submit"> Сохранить </button>
             </form>
         </#list>
