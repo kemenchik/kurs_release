@@ -26,7 +26,7 @@ public class MainController {
     @RequestMapping("/cabinet")
     public String cabinet(@AuthenticationPrincipal User user, Model model){
         model.addAttribute("user", user);
-        model.addAttribute("registers", registerRepo.findAllByUser(user));
+        model.addAttribute("registers", registerRepo.findAllByUserAndEnabledTrue(user));
         return "cabinet";
     }
 

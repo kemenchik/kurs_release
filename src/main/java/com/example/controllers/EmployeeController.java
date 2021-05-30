@@ -60,7 +60,7 @@ public class EmployeeController {
     public String addRegister(@AuthenticationPrincipal User user, @PathVariable Integer id,
                               Model model, @Valid Register register) {
         model.addAttribute("employee", employeeRepo.findByCount(id));
-        registerRepo.save(new Register(register.getDate(), employeeRepo.findByCount(id), user));
+        registerRepo.save(new Register(register.getDate(), employeeRepo.findByCount(id), user, true));
 
         model.addAttribute("employee", employeeRepo.findByCount(id));
         return "redirect:/";

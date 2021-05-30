@@ -16,16 +16,27 @@ public class Register {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
 
+    private boolean enabled;
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
     @ManyToOne
     private Employee doctor;
 
     @ManyToOne
     private User user;
 
-    public Register(Date date, Employee doctor, User user) {
+    public Register(Date date, Employee doctor, User user, boolean en) {
         this.date = date;
         this.doctor = doctor;
         this.user = user;
+        enabled = en;
     }
 
     public Integer getId() {
