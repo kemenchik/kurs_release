@@ -8,7 +8,7 @@
                     ${comm.text}
                     <input type="checkbox" ${comm.enabled?string("checked", "")} name="enabled">
                 </div>
-                <input type="hidden" value="${comm.getId()}" name="reviewId">
+                Включен :<input type="hidden" value="${comm.getId()}" name="reviewId">
                 <button type="submit"> Сохранить </button>
             </form>
         </#list>

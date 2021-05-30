@@ -16,9 +16,9 @@
                     <li>
                         <h5>Дата: ${regs.date}</h5>
                         <h5>Врач: ${regs.doctor.firstName} ${regs.doctor.secondName}</h5>
-                        <input type="checkbox" ${regs.enabled?string("checked", "")} name="enabled">
+                        Включен :<input type="checkbox" ${regs.enabled?string("checked", "")} name="enabled">
                         <input type="hidden" name="regId" value="${regs.id}">
-                        <button type="submit" style="background-color: red">Выключить</button>
+                        <button type="submit" style="background-color: red">Сохранить</button>
                     </li>
                 </ul>
             </form>
