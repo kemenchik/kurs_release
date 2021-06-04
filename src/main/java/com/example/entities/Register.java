@@ -18,7 +18,7 @@ public class Register {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer Id;
 
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME, pattern = "yyyy:MM:dd HH:mm")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @JsonFormat(pattern = "yyyy:MM:dd HH:mm")
     private LocalDateTime date;
 
