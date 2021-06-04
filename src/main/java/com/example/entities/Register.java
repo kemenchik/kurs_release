@@ -1,8 +1,13 @@
 package com.example.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.sql.Time;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Set;
 
@@ -13,8 +18,10 @@ public class Register {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer Id;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date date;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME, pattern = "yyyy:MM:dd HH:mm")
+    @JsonFormat(pattern = "yyyy:MM:dd HH:mm")
+    private LocalDateTime date;
+
 
     private boolean enabled;
 
@@ -32,7 +39,9 @@ public class Register {
     @ManyToOne
     private User user;
 
-    public Register(Date date, Employee doctor, User user, boolean en) {
+
+
+    public Register(LocalDateTime date, Employee doctor, User user, boolean en) {
         this.date = date;
         this.doctor = doctor;
         this.user = user;
@@ -66,15 +75,15 @@ public class Register {
     public Register() {
     }
 
-    public Register(Date date) {
+    public Register(LocalDateTime date) {
         this.date = date;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 

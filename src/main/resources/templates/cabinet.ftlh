@@ -8,7 +8,7 @@
         <h2>${user.username}</h2>
         <div>Записи:</div>
         <#list registers as reg>
-            <h3>${reg.date}</h3>
+            <h3>${reg.date.dayOfMonth}/${reg.date.monthValue} - ${reg.date.hour}:${reg.date.minute}</h3>
         <#else>
             <h3>Записей нет!</h3>
         </#list>
