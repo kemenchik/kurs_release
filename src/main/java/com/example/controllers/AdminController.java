@@ -1,6 +1,7 @@
 package com.example.controllers;
 
 
+import com.example.entities.Employee;
 import com.example.entities.Register;
 import com.example.entities.Review;
 import com.example.entities.User;
@@ -45,6 +46,20 @@ public class AdminController {
     @GetMapping
     @RequestMapping("/doctors")
     public String getAllDoctors(Model model){
+        model.addAttribute("employees", employeeRepo.findAll());
+        return "listEmployee";
+    }
+
+    @RequestMapping(value = "/doctors", method = RequestMethod.POST)
+    public String addNewEmployee(
+            Model model,
+            @RequestParam("firstname") String firstName,
+            @RequestParam("secondname") String secondName,
+            @RequestParam("cabinet") String cabinet,
+            @RequestParam("details") String details,
+            @RequestParam("profession") String profession
+            ) {
+        employeeRepo.save(new Employee(firstName, secondName, cabinet, details, profession));
         model.addAttribute("employees", employeeRepo.findAll());
         return "listEmployee";
     }

@@ -100,6 +100,14 @@ public class Employee {
         this.cabinet = cabinet;
     }
 
+    public Employee(String firstName, String secondName, String cabinet, String details, String profession) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.cabinet = cabinet;
+        this.details = details;
+        this.profession = profession;
+    }
+
     public Employee(Integer id, Integer count, String firstName, String secondName, String cabinet, String details, Set<Register> registers, Set<Review> comments) {
         this.id = id;
         this.count = count;
